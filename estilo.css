@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #e0f7fa;
+    color: #2e3a59;
+    overflow: hidden;
+   }
+   h1, h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+   }
+ 
+   .background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, #e0f7fa, #fce4ec, #E1BEE7);
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+    animation: animacao 5s infinite alternate;
+    z-index: -1;
+   }
+   @keyframes animacao {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+   }
+ 
+   .container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+   }
+   .barraLateral {
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    border-radius: 0 25px 25px 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+   }
+   .barraLateral h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+   }
+   .barraLateral ul {
+    list-style: none;
+    padding: 0;
+   }
+   .barraLateral a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #2e3a59;
+    padding: 8px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+   }
+   .barraLateral a:hover {
+    background-color: #f5a2f5;
+    transform: scale(1.05);
+   }
+   main header{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 1;
+    background: linear-gradient(120deg, #ce93d8, #f8bbd0, #b2ebf2);;
+    border-radius: 50px;
+    padding: 35px 35px;
+    background-size: 300% 300%;
+    animation: degradeTitulo 5s ease infinite;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+   }
+   @keyframes degradeTitulo{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+   }
+   .areaFoco {
+    flex-grow: 1;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .areaFoco h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+   }
+   textarea {
+    width: 60%;
+    height: 150px;
+    border: none;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    resize: none;
+    transition: box-shadow 0.3s ease;
+   }
+
+   body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .botaoPomodoro {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .botaoPomodoro:hover {
+    background-color: #ef5350;
+    transform: scale(1.05);
+  }
+  
+  .pomodoro-box {
+    margin-top: 20px;
+    width: 60%;
+    height: 25px;
+    background-color: #f8bbd0;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+  }
+  
+  #startPomodoro:checked + .botaoPomodoro + .pomodoro-box {
+    display: block;
+  }
+  
+  /* Barra Pomodoro vermelha */
+  .barra {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+  
+  .barra-pomodoro {
+    background-color: #c62828;
+    z-index: 1;
+    animation: encherBarraPomodoro 25s linear forwards; /* 25 segundos para o Pomodoro */
+  }
+  
+  /* Barra de descanso verde claro */
+  .barra-descanso {
+    background-color: #b2dfdb;
+    z-index: 2;
+    animation: encherBarraDescanso 5s linear forwards;
+    animation-delay: 25s; /* A barra de descanso só começa após o Pomodoro */
+  }
+  
+  /* Animação de preenchimento das barras */
+  @keyframes encherBarraPomodoro {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  
+  @keyframes encherBarraDescanso {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  
+  /* Contador Pomodoro */
+  .contador {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+    pointer-events: none;
+  }
+  
+  .contador-pomodoro {
+    z-index: 3;
+    animation: mostrarPomodoro 25s forwards; /* 25 segundos de Pomodoro */
+    animation-delay: 0s; /* Sem atraso */
+  }
+  
+  .contador-descanso {
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    animation: mostrarDescanso 5s forwards;
+    animation-delay: 25s;
+  }
+  
+  /* Animações de visibilidade dos contadores */
+  @keyframes mostrarPomodoro {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes mostrarDescanso {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  

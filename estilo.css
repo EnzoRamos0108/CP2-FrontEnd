@@ -242,17 +242,17 @@ body {
 
   .pomodoro-contador {
     margin-top: auto;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-    font-family: var(--fonte-corpo);
+    font-family: Times;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .pomodoro-contador h3 {
-    font-size: 1rem;
-    color: var(--cor-principal);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.5px;
+     text-align: left;
+     margin-left: 1rem; 
+    font-size: 1.2rem; 
+    color:#2e3a59
   }
   
   .tomatoes {
@@ -277,4 +277,9 @@ body {
     transform: scale(1.2);
   }
   
+  .barraLateral .linha-divisoria {
+    border-top: 2px solid #2e3a59; 
+    margin: 20px 0; 
+}
+
   

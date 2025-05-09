@@ -239,4 +239,42 @@ body {
     font-size: 14px;
     color: #555;
   }
+
+  .pomodoro-contador {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--fonte-corpo);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .pomodoro-contador h3 {
+    font-size: 1rem;
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .tomatoes {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .tomatoes input {
+    display: none;
+  }
+  
+  .tomatoes span {
+    font-size: 1.3rem;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .tomatoes input:checked + span {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
   

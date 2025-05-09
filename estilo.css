@@ -160,15 +160,15 @@ body {
   .barra-pomodoro {
     background-color: #c62828;
     z-index: 1;
-    animation: encherBarraPomodoro 25s linear forwards; 
+    animation: encherBarraPomodoro 1500s linear forwards; 
   }
   
   
   .barra-descanso {
     background-color: #b2dfdb;
     z-index: 2;
-    animation: encherBarraDescanso 5s linear forwards;
-    animation-delay: 25s; 
+    animation: encherBarraDescanso 300s linear forwards;
+    animation-delay: 1500s; 
   }
   
   
@@ -196,7 +196,7 @@ body {
   
   .contador-pomodoro {
     z-index: 3;
-    animation: mostrarPomodoro 25s forwards; 
+    animation: mostrarPomodoro 1500s forwards; 
     animation-delay: 0s; 
   }
   
@@ -204,8 +204,8 @@ body {
     z-index: 4;
     opacity: 0;
     visibility: hidden;
-    animation: mostrarDescanso 5s forwards;
-    animation-delay: 25s;
+    animation: mostrarDescanso 300s forwards;
+    animation-delay: 1500s;
   }
   
   

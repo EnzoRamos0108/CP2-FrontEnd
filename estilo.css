@@ -143,7 +143,7 @@ body {
     display: block;
   }
   
-  /* Barra Pomodoro vermelha */
+
   .barra {
     height: 100%;
     width: 100%;
@@ -156,18 +156,18 @@ body {
   .barra-pomodoro {
     background-color: #c62828;
     z-index: 1;
-    animation: encherBarraPomodoro 25s linear forwards; /* 25 segundos para o Pomodoro */
+    animation: encherBarraPomodoro 25s linear forwards; 
   }
   
-  /* Barra de descanso verde claro */
+  
   .barra-descanso {
     background-color: #b2dfdb;
     z-index: 2;
     animation: encherBarraDescanso 5s linear forwards;
-    animation-delay: 25s; /* A barra de descanso só começa após o Pomodoro */
+    animation-delay: 25s; 
   }
   
-  /* Animação de preenchimento das barras */
+  
   @keyframes encherBarraPomodoro {
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
@@ -178,7 +178,7 @@ body {
     to { transform: translateX(0); }
   }
   
-  /* Contador Pomodoro */
+  
   .contador {
     position: absolute;
     right: 15px;
@@ -192,8 +192,8 @@ body {
   
   .contador-pomodoro {
     z-index: 3;
-    animation: mostrarPomodoro 25s forwards; /* 25 segundos de Pomodoro */
-    animation-delay: 0s; /* Sem atraso */
+    animation: mostrarPomodoro 25s forwards; 
+    animation-delay: 0s; 
   }
   
   .contador-descanso {
@@ -204,7 +204,7 @@ body {
     animation-delay: 25s;
   }
   
-  /* Animações de visibilidade dos contadores */
+  
   @keyframes mostrarPomodoro {
     0% {
       opacity: 1;

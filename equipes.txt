@@ -1,0 +1,11 @@
+Lista de Equipe.
+
+Nomes dos Integrantes:
+1. Enzo Fernandes Ramos - 563705
+2. Felipe Henrique Cerazi - 562746
+3. Gustavo Peaguda de Castro - 562923
+
+
+
+Curso: Engenharia de Software
+Sala: 1ESPF
